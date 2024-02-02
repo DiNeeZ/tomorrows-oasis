@@ -1,0 +1,21 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.15s ease-in-out;
+
+  &:hover {
+    color: var(--secondary-text-color);
+  }
+
+  &__icon {
+    height: 28px;
+    width: 28px;
+    fill: currentColor;
+  }
+
+  &__text {
+    font-size: 26px;
+    font-weight: bold;
+  }
+}
