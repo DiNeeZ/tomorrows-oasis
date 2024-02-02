@@ -1,0 +1,21 @@
+:root {
+  --container-width: 1200px;
+  --container-padding: 15px;
+
+  --font-main: 'Roboto', sans-serif;
+
+  --text-color: #1d2130;
+  --secondary-text-color: #525560;
+  --off-white-color: #ebf0f9;
+  --border-color: #e5e5e5;
+  --black-color: #0b0706;
+  --white-color: #ffffff;
+  --green-primary-color: #70c174;
+  --green-secondary-color: #bef3c0;
+  --green-tertiary-color: #eff7f2;
+}
+
+.dark {
+  --page-bg: #252526;
+  --text-color: #f0f0f0;
+}

@@ -1,0 +1,44 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--white-color);
+  color: var(--text-color);
+  font-family: var(--font-main);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.btn,
+.btn-secondary,
+.btn-nav {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1;
+  border-radius: 0.25rem;
+  transition: opacity 0.15s ease-in-out;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.btn {
+  color: var(--white-color);
+  background-color: var(--green-primary-color);
+}
+
+.btn-secondary {
+  color: var(--text-color);
+  background-color: var(--white-color);
+}
+
+.btn-nav {
+  color: var(--white-color);
+  background-color: var(--text-color);
+}

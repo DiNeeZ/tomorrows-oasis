@@ -1,0 +1,46 @@
+.header {
+  padding: 1rem 0;
+  background-color: var(--white-color);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__burger {
+    display: none;
+    z-index: 1001;
+    align-self: start;
+    @include small-tablet {
+      display: block;
+      margin-right: 15px;
+    }
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.15s ease-in-out;
+
+  &:hover {
+    color: var(--secondary-text-color);
+  }
+
+  &__icon {
+    height: 28px;
+    width: 28px;
+    fill: currentColor;
+  }
+
+  &__text {
+    font-size: 26px;
+    font-weight: bold;
+  }
+}
+
+.burger {
+  @include burger;
+}
