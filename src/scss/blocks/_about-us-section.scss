@@ -1,4 +1,43 @@
 .about-us-section {
   padding-top: 6rem;
   padding-bottom: 4rem;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+  }
+
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+  }
+
+  &__content {
+    max-width: 608px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: flex-start;
+    margin-top: 2rem;
+    padding-left: 6rem;
+  }
+
+  &__video {
+    display: flex;
+    flex-grow: 1;
+    max-width: 480px;
+    height: 100%;
+    background-color: pink;
+
+    aspect-ratio: 5/6;
+
+    & .video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
 }

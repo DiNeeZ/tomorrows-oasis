@@ -6,7 +6,7 @@
       </h1>
       <div class="hero__btns">
         <a href="#" class="hero__activity-btn btn btn--secondary">What we do</a>
-        <button type="button" class="hero__video-btn">
+        <button type="button" class="hero__video-btn" data-modal="modal-one">
           <div class="hero__video-btn-icon-wrapper">
             <svg class="hero__video-btn-icon">
               <use xlink:href="img/sprite.svg#play"></use>
@@ -20,6 +20,25 @@
       <span class="hero__bottom-text">23,800 trees planted</span>
       <span class="hero__bottom-divider"></span>
       <span class="hero__bottom-text">5840 donations collected</span>
+    </div>
+  </div>
+  <!-- // Video Modal -->
+  <div class="modal" id="modal-one">
+    <div class="modal-bg modal-exit"></div>
+    <div class="modal-container video-block video-block--modal">
+      <video
+        class="modal__content video video--modal"
+        src="files/hero.mp4"
+        muted
+        loop
+        preload="metadata"
+      ></video>
+      <button class="video-block__play video-block__play--modal btn-reset">
+        <svg>
+          <use xlink:href="img/sprite.svg#play"></use>
+        </svg>
+      </button>
+      <a class="modal-close modal-exit">&#10006;</a>
     </div>
   </div>
 </section>

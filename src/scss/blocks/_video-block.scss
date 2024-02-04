@@ -1,0 +1,56 @@
+.video-block {
+  max-width: 1025px;
+  &--played {
+    &::before {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    z-index: 10;
+
+    transition:
+      background-color 0.3s ease-in-out,
+      opacity 0.3s ease-in-out,
+      visibility 0.3s ease-in-out;
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+      fill: var(--text-color);
+    }
+
+    &:focus {
+      outline: 2px solid var(--white-color);
+      outline-offset: 2px;
+    }
+
+    &--played {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    @include mobile {
+      background-color: transparent;
+      svg {
+        fill: var(--white-color);
+      }
+    }
+  }
+}
+
+.video {
+  width: 100%;
+}
