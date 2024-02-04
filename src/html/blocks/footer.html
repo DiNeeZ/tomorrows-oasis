@@ -1,12 +1,12 @@
 <footer class="footer">
-  <div class="container">
+  <div class="container footer__container">
     <a class="footer__logo logo" href="#">
       <svg class="logo__icon">
         <use xlink:href="img/sprite.svg#logo"></use>
       </svg>
       <span class="logo__text">Tomorrow's Oasis</span>
     </a>
-    <div class="footer_columns">
+    <div class="footer__columns">
       <div class="footer__column footer-col">
         <h3 class="footer-col__title">Our team</h3>
         <ul class="footer-col__list">
@@ -58,11 +58,19 @@
           </li>
         </ul>
       </div>
-      <div class="footer__column"></div>
-      <div class="footer__column"></div>
     </div>
-    <div class="footer__subscribe footer-subscr">
-      <h2 class="footer-subscr__title"></h2>
+    <div class="footer__subscribe">
+      <h2 class="footer__subscribe-title">Subscribe to get latest updates</h2>
+      <form class="footer__form footer-form">
+        <input
+          class="footer-form__input"
+          placeholder="Your email"
+          type="text"
+        />
+        <button type="submit" class="footer-form__btn btn btn--secondary">
+          Subscribe
+        </button>
+      </form>
     </div>
   </div>
 </footer>

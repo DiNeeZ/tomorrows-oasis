@@ -3,6 +3,12 @@
   color: var(--off-white-color);
   background-color: var(--black-color);
 
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
   &__logo {
     .logo {
       &__icon {
@@ -14,6 +20,105 @@
         font-size: 16px;
         max-width: 100px;
       }
+    }
+  }
+
+  &__columns {
+    display: flex;
+    align-items: flex-start;
+    gap: 88px;
+  }
+
+  &__subscribe {
+    display: flex;
+    // align-items: flex-start;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__subscribe-title {
+    font-size: 40px;
+    font-weight: 700;
+    max-width: 440px;
+  }
+
+  @include tablet {
+    padding: 2rem 0;
+
+    &__container {
+      flex-direction: column;
+      gap: 4rem;
+    }
+
+    &__subscribe-title {
+      font-size: 24px;
+      max-width: 440px;
+    }
+  }
+
+  @include mobile {
+    &__columns {
+      gap: 36px;
+    }
+  }
+}
+
+.footer-form {
+  display: flex;
+  max-width: 496px;
+  border: 1px solid rgba(#ebf0f9, 0.3);
+  border-right: transparent;
+  border-radius: 0.25rem;
+
+  &:focus-within {
+    border-color: rgba(#ebf0f9, 1);
+  }
+
+  &__input {
+    flex-grow: 1;
+    padding-left: 1.5rem;
+    padding-right: 2rem;
+
+    &::placeholder {
+      font-size: 1rem;
+    }
+  }
+
+  @include mobile {
+    flex-direction: column;
+    gap: 2rem;
+    border: none;
+
+    &__input {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      border: 1px solid rgba(#ebf0f9, 0.3);
+      border-radius: 0.25rem;
+    }
+  }
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  &__title {
+    font-weight: 700;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__link {
+    font-size: 14px;
+    transition: opacity 0.15s ease-in-out;
+
+    &:hover {
+      opacity: 0.8;
     }
   }
 }
