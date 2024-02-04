@@ -1,0 +1,118 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 80px);
+  @include bg-imageset("hero-bg", jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: var(--white-color);
+
+  &__container {
+    width: 100%;
+    flex: 1;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    padding-top: 128px;
+    padding-bottom: 64px;
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+
+    @include small-tablet {
+      align-items: center;
+    }
+  }
+
+  &__title {
+    max-width: 640px;
+    font-size: 64px;
+    font-weight: 700;
+
+    @include small-tablet {
+      font-size: 3rem;
+      text-align: center;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 1rem;
+    }
+  }
+
+  &__video-btn {
+    max-height: 48px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    font-weight: 500;
+    color: var(--white-color);
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out;
+
+    &:focus-visible {
+      border-color: var(--off-white-color);
+    }
+
+    &:hover {
+      .hero__video-btn-icon-wrapper {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__video-btn-icon-wrapper {
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: opacity 0.15s ease-in-out;
+  }
+
+  &__video-btn-icon {
+    stroke: black;
+    width: 10px;
+    height: 10px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 18px;
+    font-weight: 500;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__bottom-divider {
+    flex-grow: 1;
+    background-color: #fff;
+    height: 1px;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  @include small-tablet {
+    min-height: calc(100dvh - 62px);
+  }
+}
