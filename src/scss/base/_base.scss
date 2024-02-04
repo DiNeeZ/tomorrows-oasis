@@ -55,3 +55,22 @@ a {
     }
   }
 }
+
+.section-title {
+  position: relative;
+  padding-left: 6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-color);
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 72px;
+    height: 2px;
+    background-color: var(--text-color);
+  }
+}
