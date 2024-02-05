@@ -79,3 +79,17 @@ a {
     }
   }
 }
+
+.section-subtitle {
+  font-size: 3rem;
+  line-height: 120%;
+  font-weight: 700;
+
+  @include small-tablet {
+    text-align: center;
+  }
+
+  @include mobile {
+    font-size: 2rem;
+  }
+}
