@@ -2,16 +2,34 @@
   padding-top: 6rem;
   padding-bottom: 4rem;
 
+  @include small-tablet {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
+
   &__top {
     display: flex;
     align-items: center;
     gap: 6rem;
+    margin-bottom: 4rem;
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    @include small-tablet {
+      gap: 4rem;
+    }
   }
 
   &__content-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 6rem;
+    gap: 2rem;
+
+    @include small-tablet {
+      gap: 1rem;
+    }
   }
 
   &__content {
@@ -20,24 +38,152 @@
     flex-direction: column;
     gap: 3rem;
     align-items: flex-start;
-    margin-top: 2rem;
     padding-left: 6rem;
+
+    @include small-tablet {
+      padding-left: 0;
+      gap: 1.5rem;
+    }
   }
 
-  &__video {
+  &__subtitle {
+    font-size: 3rem;
+    line-height: 120%;
+    font-weight: 700;
+
+    @include small-tablet {
+      text-align: center;
+    }
+
+    @include mobile {
+      font-size: 2rem;
+    }
+  }
+
+  &__text {
+    @include small-tablet {
+      text-align: center;
+    }
+  }
+
+  &__btn {
+    @include small-tablet {
+      align-self: center;
+    }
+  }
+
+  &__support-title {
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(100px, 1fr));
+    gap: 6rem;
+    justify-content: space-between;
+
+    @include laptop {
+      gap: 3rem;
+    }
+
+    @include tablet {
+      grid-template-columns: repeat(3, minmax(100px, 1fr));
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(2, minmax(100px, 1fr));
+      gap: 1rem;
+    }
+  }
+
+  &__list-item {
     display: flex;
-    flex-grow: 1;
-    max-width: 480px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__list-icon {
+    fill: var(--text-color);
+
+    &--supporter-1 {
+      width: 142px;
+      height: 28px;
+    }
+
+    &--supporter-2 {
+      width: 137px;
+      height: 31px;
+    }
+    &--supporter-3 {
+      width: 125px;
+      height: 29px;
+    }
+    &--supporter-4 {
+      width: 124px;
+      height: 25px;
+    }
+    &--supporter-5 {
+      width: 134px;
+      height: 31px;
+    }
+    &--supporter-6 {
+      width: 137px;
+      height: 31px;
+    }
+  }
+}
+
+.about-video {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  max-width: 480px;
+  height: 100%;
+  aspect-ratio: 5/6;
+  border-radius: 12px;
+  overflow: hidden;
+
+  @include mobile {
+    width: 100%;
+  }
+
+  .video {
+    width: 100%;
     height: 100%;
-    background-color: pink;
+    object-fit: cover;
+    object-position: center;
+  }
 
-    aspect-ratio: 5/6;
+  &__play {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--white-color);
+    transition: opacity 0.15s ease-in-out;
 
-    & .video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:focus-visible {
+      outline: auto;
+    }
+
+    svg {
+      width: 22px;
+      height: 24px;
+      margin-left: 4px;
+      fill: var(--text-color);
     }
   }
 }

@@ -24,9 +24,7 @@ a {
   border-radius: 0.25rem;
   outline: none;
   box-shadow: none;
-  transition:
-    opacity 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
+  transition: opacity 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
   &:hover,
   &:focus-visible {
@@ -64,7 +62,7 @@ a {
   color: var(--text-color);
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     top: 50%;
@@ -72,5 +70,12 @@ a {
     width: 72px;
     height: 2px;
     background-color: var(--text-color);
+  }
+
+  @include mobile {
+    padding-left: 0;
+    &::before {
+      display: none;
+    }
   }
 }
