@@ -1,0 +1,140 @@
+.donuts {
+  --purple-color: #ac94f1;
+  --yellow-color: #fff0ca;
+  --orange-color: #f9cf64;
+  --pink-color: #f38fbf;
+
+  padding: 6rem 0;
+  background-color: var(--black-color);
+  color: var(--white-color);
+
+  @include tablet {
+    padding: 3rem 0;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    max-width: 620px;
+  }
+
+  &__heading {
+    margin-bottom: 2rem;
+
+    @include tablet {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 120%;
+  }
+
+  &__subtitle {
+    line-height: 160%;
+    color: rgba(#fff, 0.6);
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1.5rem;
+    row-gap: 1rem;
+
+    @include tablet {
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__mark {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.25rem;
+
+    &--green {
+      background-color: var(--green-secondary-color);
+    }
+    &--purple {
+      background-color: var(--purple-color);
+    }
+    &--yellow {
+      background-color: var(--yellow-color);
+    }
+    &--orange {
+      background-color: var(--orange-color);
+    }
+    &--pink {
+      background-color: var(--pink-color);
+    }
+  }
+
+  &__purpose {
+    font-weight: 500;
+    line-height: 160%;
+  }
+
+  &__chart {
+    flex-shrink: 0;
+  }
+}
+
+.donut {
+  width: 375px;
+  height: 375px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--green-secondary-color) 0deg 144deg,
+    var(--purple-color) 144deg 270deg,
+    var(--yellow-color) 270deg 306deg,
+    var(--orange-color) 306deg 342deg,
+    var(--pink-color) 342deg 360deg
+  );
+
+  @include mobile {
+    width: 100%;
+    height: 100%;
+    max-width: 375px;
+    aspect-ratio: 1/1;
+  }
+
+  &__center {
+    width: 52%;
+    height: 52%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black-color);
+    border-radius: 50%;
+
+    @include mobile {
+      aspect-ratio: 1/1;
+    }
+  }
+
+  &__icon {
+    width: 50px;
+    height: 50px;
+    fill: var(--white-color);
+  }
+}
