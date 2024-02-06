@@ -1,12 +1,4 @@
 .about-us-section {
-  padding-top: 6rem;
-  padding-bottom: 4rem;
-
-  @include small-tablet {
-    padding-top: 3rem;
-    padding-bottom: 2rem;
-  }
-
   &__top {
     display: flex;
     align-items: center;
