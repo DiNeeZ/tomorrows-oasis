@@ -1,5 +1,4 @@
 .video-block {
-  max-width: 1025px;
   &--played {
     &::before {
       opacity: 0;
@@ -12,8 +11,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 5rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,15 +20,14 @@
     border-radius: 50%;
     z-index: 10;
 
-    transition:
-      background-color 0.3s ease-in-out,
-      opacity 0.3s ease-in-out,
+    transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out,
       visibility 0.3s ease-in-out;
 
     svg {
-      width: 2rem;
-      height: 2rem;
+      width: 1.5rem;
+      height: 1.5rem;
       fill: var(--text-color);
+      margin-left: 3px;
     }
 
     &:focus {
@@ -40,13 +38,6 @@
     &--played {
       opacity: 0;
       visibility: hidden;
-    }
-
-    @include mobile {
-      background-color: transparent;
-      svg {
-        fill: var(--white-color);
-      }
     }
   }
 }

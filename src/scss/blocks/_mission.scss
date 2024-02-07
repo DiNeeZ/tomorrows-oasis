@@ -1,0 +1,69 @@
+.mission {
+  &__video-block {
+    position: relative;
+    aspect-ratio: 20/7;
+    border-radius: 0.75rem;
+    overflow: hidden;
+  }
+
+  &__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__main {
+    margin-top: -224px;
+    padding-top: 320px;
+    padding-bottom: 6rem;
+    background-color: var(--green-tertiary-color);
+
+    @include laptop {
+      margin-top: 0;
+      padding-top: 6rem;
+    }
+  }
+
+  &__main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-start;
+    gap: 6rem;
+
+    @include tablet {
+      gap: 2rem;
+    }
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+}
+
+.mission-descr {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  &__subtitle {
+    font-size: 1.75rem;
+    line-height: 150%;
+    font-weight: 700;
+  }
+
+  &__text {
+    line-height: 160%;
+  }
+}

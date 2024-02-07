@@ -1,4 +1,4 @@
-const aboutUsVideoBlock = document.querySelector('.about-video');
+const aboutUsVideoBlock = document.querySelector('.mission-video');
 
 if (aboutUsVideoBlock) {
   const video = aboutUsVideoBlock.querySelector('.video');

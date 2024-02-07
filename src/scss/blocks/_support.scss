@@ -1,0 +1,64 @@
+.support {
+  &__title {
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(100px, 1fr));
+    gap: 6rem;
+    justify-content: space-between;
+
+    @include laptop {
+      gap: 3rem;
+    }
+
+    @include tablet {
+      grid-template-columns: repeat(3, minmax(100px, 1fr));
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(2, minmax(100px, 1fr));
+      gap: 1rem;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon {
+    fill: var(--text-color);
+
+    &--supporter-1 {
+      width: 142px;
+      height: 28px;
+    }
+
+    &--supporter-2 {
+      width: 137px;
+      height: 31px;
+    }
+    &--supporter-3 {
+      width: 125px;
+      height: 29px;
+    }
+    &--supporter-4 {
+      width: 124px;
+      height: 25px;
+    }
+    &--supporter-5 {
+      width: 134px;
+      height: 31px;
+    }
+    &--supporter-6 {
+      width: 137px;
+      height: 31px;
+    }
+  }
+}
